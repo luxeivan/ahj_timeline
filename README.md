@@ -1,8 +1,8 @@
-# Webpack5
+# Timeline
 
-[![Build status](https://ci.appveyor.com/api/projects/status/pux7o1qbwf837x2s?svg=true)](https://ci.appveyor.com/project/luxeivan/ahj-popovers)
+[![Build status](https://ci.appveyor.com/api/projects/status/f4nryklpovtugo5l?svg=true)](https://ci.appveyor.com/project/luxeivan/ahj-timeline)
 
-[GitHub Pages](https://luxeivan.github.io/ahj-popovers/)
+[GitHub Pages](https://luxeivan.github.io/ahj-timeline/)
 
 [Информация о релизе Webpack 5](https://webpack.js.org/blog/2020-10-10-webpack-5-release/)
 
