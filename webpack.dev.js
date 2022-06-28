@@ -1,21 +1,25 @@
 const path = require('path');
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-    ]
-  },
-    mode: 'development',
-devServer: {
+const webpack = require('webpack');
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common');
+
+module.exports = merge(common, {
+  // Set the mode to development or production
+  mode: 'development',
+  // Control how source maps are generated
+  devtool: 'inline-source-map',
+
+  // Spin up a server for quick development
+  devServer: {
     historyApiFallback: true,   
-    static: {
-        directory: path.resolve(__dirname, './dist'),
-      },
+    contentBase: path.resolve(__dirname, './dist'),
     open: true,
     compress: true,
-    port: 8082,
-  }
-}
+    port: 8080,
+  },
+
+  plugins: [
+    // Only update what has changed on hot reload
+    new webpack.HotModuleReplacementPlugin(),
+  ],
+});
